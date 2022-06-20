@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Deep Dark Square Root</title>
+    <!--    external css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../static/css/index.css">
+    <!--    external js-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <script src="../static/js/language.js" type="text/javascript"></script>
+
+    <script src="../static/js/math.js" type="text/javascript"></script>
+
+    <script src="../static/js/index.js" type="text/javascript"></script>
+</head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+    <div class="container">
+        <!-- Заголовок сайта слева в панели навигации-->
+        <a class="navbar-brand" lang="en" href="#">Square Root Extractor</a>
+        <a class="navbar-brand" lang="ru" href="#">Извлекатель корня</a>
+        <a class="navbar-brand" lang="ch" href="#">平方根提取器</a>
+        <a class="navbar-brand" lang="es" href="#">Extractor de raíces cuadradas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <!--Правые пункты меню в панели навигации-->
+                <li class="nav-item active">
+                    <a class="nav-link" lang="en" href="#">Home
+                        <span class="sr-only" lang="en">(current)</span>
+                    </a>
+                    <a class="nav-link" lang="ru" href="#">Главная страница
+                        <span class="sr-only" lang="ru">(текущая)</span>
+                    </a>
+                    <a class="nav-link" lang="ch" href="#">主页
+                        <span class="sr-only" lang="ru">(当前的)</span>
+                    </a>
+                    <a class="nav-link" lang="es" href="#">Página principal
+                        <span class="sr-only" lang="ru">(corriente)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" lang="en" href="/support">Support</a>
+                    <a class="nav-link" lang="ru" href="/support">Поддержка</a>
+                    <a class="nav-link" lang="ch" href="/support">支持</a>
+                    <a class="nav-link" lang="es" href="/support">El Apoyo</a>
+                </li>
+                <script>
+
+                </script>
+                <li class="nav-item">
+                    <a class="nav-link" lang="en" href="/documentation">Documentation</a>
+                    <a class="nav-link" lang="ru" href="/documentation">Документация</a>
+                    <a class="nav-link" lang="ch" href="/documentation">文獻資料</a>
+                    <a class="nav-link" lang="es" href="/documentation">Documentación</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <!--Элемент смены языка-->
+                        <select class="selectpicker" id="lang-switch" data-width="fit">
+                            <option selected>Choose your language</option>
+                            <option data-content='<span class="flag-icon flag-icon-en"></span> English'>English</option>
+                            <option data-content='<span class="flag-icon flag-icon-ru"></span> Russian'>Русский</option>
+                            <option data-content='<span class="flag-icon flag-icon-ch"></span> Chinese'>中国人</option>
+                            <option data-content='<span class="flag-icon flag-icon-es"></span> Español'>Español</option>
+                        </select>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="card border-0 shadow my-5">
+        <div class="card-body p-5">
+            <div class="exerciseprecontainer">
+                <p height="1">
+                <div class="lead" lang="en">Enter accuracy:</div>
+                <div class="lead" lang="ru">Введите точность:</div>
+                <div class="lead" lang="ch">输入准确度:</div>
+                <div class="lead" lang="es">Ingrese precisión:</div>
+                <input id="precision" maxlength="10" style="width: 175px;"/> <!--Элемент ввода точности-->
+                </p>
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Root_symbol.svg"
+                         width="30"><input id="number" style="width: 600px;"/> <!--Элемент ввода числа-->
+                    <button type="button" class="btn btn-warning" lang="en" onclick=ButtonCalculateClick()>Calculate
+                    </button>
+                    <button type="button" class="btn btn-warning" lang="ru" onclick=ButtonCalculateClick()>Вычислить
+                    </button>
+                    <button type="button" class="btn btn-warning" lang="ch" onclick=ButtonCalculateClick()>计算</button>
+                    <button type="button" class="btn btn-warning" lang="es" onclick=ButtonCalculateClick()>Calcular
+                    </button>
+                </div>
+                <div class="container text-center mt-5">
+                    <p class="lead mb-0" lang="en">Square Root =</p>
+                    <p class="lead mb-0" lang="ru">Квадратный корень =</p>
+                    <p class="lead mb-0" lang="ch">平方根 =</p>
+                    <p class="lead mb-0" lang="es">Raíz cuadrada =</p>
+                    <output id="answer1"></output> <!--Элемент вывода ответа-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

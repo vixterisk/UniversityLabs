@@ -1,0 +1,1 @@
+Unfortunately, I lost my database and now only have this picture and my normalization report. I would like to say that I'll reacreate db to get these apps working, but honestly I don't think this is gonna happen ![Database Structure](https://i.imgur.com/078F6Fq.png)

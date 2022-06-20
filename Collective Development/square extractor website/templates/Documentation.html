@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Deep Dark Square Root</title>
+    <!--    external css & js-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <script src="../static/js/language.js" type="text/javascript"></script>
+</head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+    <div class="container">
+        <!--        Site header-->
+        <a class="navbar-brand" lang="en" href="#">Square Root Extractor</a>
+        <a class="navbar-brand" lang="ru" href="#">Извлекатель корня</a>
+        <a class="navbar-brand" lang="ch" href="#">平方根提取器</a>
+        <a class="navbar-brand" lang="es" href="#">Extractor de raíces cuadradas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <!--        Right menu-->
+                <li class="nav-item">
+                    <a class="nav-link" lang="en" href="/">Home
+                    </a>
+                    <a class="nav-link" lang="ru" href="/">Главная страница
+                    </a>
+                    <a class="nav-link" lang="ch" href="/">主页
+                    </a>
+                    <a class="nav-link" lang="es" href="/">Página principal
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" lang="en" href="/support">Support</a>
+                    <a class="nav-link" lang="ru" href="/support">Поддержка</a>
+                    <a class="nav-link" lang="ch" href="/support">支持</a>
+                    <a class="nav-link" lang="es" href="/support">El Apoyo</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" lang="en" href="#">Documentation</a>
+                    <span class="sr-only" lang="en">(current)</span>
+                    <a class="nav-link" lang="ru" href="#">Документация</a>
+                    <span class="sr-only" lang="ru">(текущая)</span>
+                    <a class="nav-link" lang="ch" href="#">文獻資料</a>
+                    <span class="sr-only" lang="ru">(当前的)</span>
+                    <a class="nav-link" lang="es" href="#">Documentación</a>
+                    <span class="sr-only" lang="ru">(corriente)</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <select class="selectpicker" id="lang-switch" data-width="fit">
+                            <option selected>Choose your language</option>
+                            <option data-content='<span class="flag-icon flag-icon-en"></span> English'>English</option>
+                            <option data-content='<span class="flag-icon flag-icon-ru"></span> Russian'>Русский</option>
+                            <option data-content='<span class="flag-icon flag-icon-ch"></span> Chinese'>中国人</option>
+                            <option data-content='<span class="flag-icon flag-icon-es"></span> Español'>Español</option>
+                        </select>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="card border-0 shadow my-5">
+        <div class="card-body p-5">
+            <a lang="ru">
+                <div class="p-3">«Извлекатель корня» – утилита, позволяющая найти квадратный корень из числа (Квадратным корнем из
+                    числа
+                    x называют такое число, квадрат которого будет равен x). На главной странице сайта необходимо ввести
+                    число, из которого вы желаете извлечь корень, по желанию указав значение точности результата, и
+                    нажать
+                    на кнопку «Вычислить», после чего ответ будет выдан в соответствующем поле.
+                </div>
+                <div class="p-3">«Извлекатель корня» поддерживает:
+                    <ol>
+                        <li>Арифметические (Арифметическим квадратным корнем из числа а называют неотрицательное число,
+                            квадрат которого равен а);
+                        </li>
+                        <li>Корень из нуля;</li>
+                        <li>Комплексные (комплексные числа - числа вида a+bi, где a, b – вещественные числа, I – мнимая
+                            единица);
+                        </li>
+                        <li>Корень из «Длинного» числа (Длинное число – число, разрядность которого превышает длину
+                            машинного слова данной вычислительной машины – в современных компьютерах числа разрядностью
+                            более 32 или 64 знаков);
+                        </li>
+                        <li>Аналитические</li>
+                    </ol>
+                </div>
+                <div class="p-3">Также возможно задать точность найденного корня, указав в соответствующем поле желаемое число
+                    знаков после запятой.
+                </div>
+                <div class="p-3">Если вы желаете сообщить о неполадках либо внести предложения по улучшению,  можете получить информацию о том, как с нами связаться, в разделе  "Поддержка", где указаны страницы ВК разработчиков этого замечательного сайта, а так же телефон горячей линии.
+                </div>
+            </a>
+            <a lang="en">
+                <div class="p-3">"Root extractor" is a utility that allows you to find the square root of a number (The square
+                    root of a
+                    number x is a number whose square will be equal to x). On the main page of the site, you must
+                    enter the
+                    number from which you want to extract the root, optionally indicating the value of the accuracy
+                    of the
+                    result, and click on the "Calculate" button, after which the answer will be given in the
+                    appropriate
+                    field.
+                </div>
+                <div class="p-3">Root extractor supports:
+                    <ol>
+                        <li>Arithmetic (The arithmetic square root of the number a is a non-negative number whose
+                            square is
+                            equal to a);
+                        </li>
+                        <li>Root from zero;</li>
+                        <li>Complex (complex numbers are numbers of the form a + bi, where a, b are real numbers, I
+                            is an
+                            imaginary unit);
+                        </li>
+                        <li>Root of a "Long" number (Long number is a number whose bit depth exceeds the length of a
+                            machine word of a given computer - in modern computers, numbers are more than 32 or 64
+                            characters long);
+                        </li>
+                        <li>Analytical.</li>
+                    </ol>
+                </div>
+                <div class="p-3">It is also possible to set the precision of the found root by specifying the desired number of
+                    decimal places in the corresponding field.
+                </div>
+                <div class="p-3">If you want to report bugs or make suggestions for improvement, you can get information on how to contact us in the "Support" section, where the VK pages of the developers of this wonderful site are indicated, as well as the hotline phone number.
+                </div>
+            </a>
+            <a lang="ch">
+                <div class="p-3">“根提取器”是一种实用程序，可让您查找数字的平方根（
+                    数字x是一个平方等于x的数字）。在网站的主页上，您必须输入
+                    您要从中提取根的数字，可以选择指示数字的精度值
+                    结果，然后单击“计算”按钮，然后将在适当的位置给出答案
+                    场地。
+                </div>
+                <div class="p-3">根提取器支持：
+                    <ol>
+                        <li>算术（数字a的算术平方根是一个非负数，其平方为
+                            等于a）;
+                        </li>
+                        <li>从零开始的根；</li>
+                        <li>复数（复数是a + bi形式的数字，其中a，b是实数，I是一个
+                            虚数单位）;
+                        </li>
+                        <li>“长”数字的根（长数字是位深度超过a的长度的数字
+                            给定计算机的机器字-在现代计算机中，数字大于32或64
+                            长字符）;
+                        </li>
+                        <li>分析。</li>
+                    </ol>
+                </div>
+                <div class="p-3">也可以通过在相应字段中指定所需的小数位数来设置找到的根的精度。
+                </div>
+                <div class="p-3">如果您要报告错误或提出改进建议，请在“支持”部分中获取有关如何与我们联系的信息，其中指示了此站点的开发人员的VK页面以及热线电话号码。
+                </div>
+            </a>
+            <a lang="es">
+                <div class="p-3"> "Root extractor" es una utilidad que te permite encontrar la raíz cuadrada de un número (La raíz
+                    cuadrada de un
+                    el número x es un número cuyo cuadrado será igual ax). En la página principal del sitio, debe
+                    ingresar el
+                    número del que desea extraer la raíz, indicando opcionalmente el valor de la precisión de la
+                    resultado y haga clic en el botón "Calcular", después de lo cual se dará la respuesta en el
+                    campo.
+                </div>
+                <div class="p-3"> El extractor de raíces admite:
+                    <ol>
+                        <li> Aritmética (La raíz cuadrada aritmética del número a es un número no negativo cuyo cuadrado
+                            es
+                            igual a a);
+                        </li>
+                        <li> Raíz desde cero;</li>
+                        <li> Complejo (los números complejos son números de la forma a + bi, donde a, b son números
+                            reales, I es un
+                            unidad imaginaria);
+                        </li>
+                        <li> Raíz de un número "largo" (el número largo es un número cuya profundidad de bits excede la
+                            longitud de un
+                            palabra de máquina de una computadora determinada: en las computadoras modernas, los números
+                            son más de 32 o 64
+                            caracteres de largo);
+                        </li>
+                        <li> Analítico.</li>
+                    </ol>
+                </div>
+                <div class="p-3">También es posible establecer la precisión de la raíz encontrada especificando el número deseado de
+                    posiciones decimales en el campo correspondiente.
+                </div>
+                <div class="p-3">Si desea reportar errores o hacer sugerencias de mejora, puede obtener información sobre cómo contactarnos en la sección "Soporte", donde se indican las páginas VK de los desarrolladores de este maravilloso sitio, así como el número de teléfono de la línea directa.
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

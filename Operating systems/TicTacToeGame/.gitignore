@@ -1,0 +1,9 @@
+*.exe
+ipch/
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.opendb
+*.cachefile
+Debug|
