@@ -1,4 +1,4 @@
-Small c++ application made as an university work, that renders spinning 3D-model of a water surface with an applied textures and uses openGL API to do so. 
+Small c++ application that renders spinning 3D-model of a water surface with an applied textures and uses openGL API to do so. 
 
 Task: create a program that 
 - Renders a 3D-object that represents a surface described by a math equation ![equation](https://latex.codecogs.com/png.image?\inline&space;\dpi{110}\bg{white}0.02&space;cos(100&space;((-0.5&space;&plus;&space;x)^2&space;&plus;&space;(-0.5&space;&plus;&space;y)^2))). Matrix describing this object should be generated automatically, not hard-coded, and vertices should be transformed to create needed shape within the shaders;
